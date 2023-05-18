@@ -21,7 +21,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
-    return this.items[this.items.length - 1];
+    return this.items[this.length - 1];
   }
 
   min() {
@@ -45,7 +45,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
-    return this.sum() / this.items.length;
+    return this.sum() / this.length;
   }
 }
 
