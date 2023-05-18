@@ -11,21 +11,21 @@ class SortedList {
   }
 
   get(pos) {
-    if (pos > this.items.length) {
+    if (pos > this.length) {
       throw new Error("OutOfBounds");
     }
     return this.items[pos];
   }
 
   max() {
-    if (this.items.length === 0) {
+    if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
     return this.items[this.items.length - 1];
   }
 
   min() {
-    if (this.items.length === 0) {
+    if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
     return this.items[0];
@@ -35,19 +35,17 @@ class SortedList {
     let total = 0;
     if (this.length > 0) {
       this.items.forEach((num) => {
-        total += num
+        total += num;
       });
-    } else {
-      return 0;
     }
     return total;
   }
 
   avg() {
-    if (this.items.length === 0) {
-      throw new Error('EmptySortedList')
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
     }
-    return this.sum()/this.items.length
+    return this.sum() / this.items.length;
   }
 }
 
